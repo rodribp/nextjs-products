@@ -1,0 +1,4 @@
+.phone-shadow {
+  /* Apply shadow to the masked area */
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
