@@ -61,6 +61,28 @@ export default function Icon(props: Props) {
         </>
       ),
     },
+    {
+      name: "user",
+      type: "outline",
+      path: (
+        <path
+          stroke="currentColor"
+          stroke-width="2"
+          d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+        />
+      ),
+    },
+    {
+      name: "user",
+      type: "solid",
+      path: (
+        <path
+          fill-rule="evenodd"
+          d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"
+          clip-rule="evenodd"
+        />
+      ),
+    },
   ];
 
   //Iterate through the paths and return the path that matches the name and type
