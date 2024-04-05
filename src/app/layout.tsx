@@ -4,6 +4,7 @@ import "flowbite";
 import "./globals.css";
 import SearchBar from "@/app/components/searchBar";
 import Icon from "@/app/components/icons";
+import { ThemeModeScript, DarkThemeToggle, Flowbite } from "flowbite-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <ThemeModeScript />
+      </head>
       <body className={inter.className}>
         <nav className="lg:px-6 flex justify-between items-center py-6 fixed z-20 bg-transparent w-full backdrop-blur">
           <div className="flex items-center gap-2">
@@ -33,6 +37,11 @@ export default function RootLayout({
 
           <ul className="hidden lg:flex mr-2">
             <li>
+            <Flowbite>
+              <DarkThemeToggle />
+            </Flowbite>
+            </li>
+            <li>
               <SearchBar />
             </li>
           </ul>
@@ -41,7 +50,7 @@ export default function RootLayout({
           {children}
         </main>
 
-        <footer className="bg-transparent rounded-lg shadow dark:bg-gray-900 m-4">
+        <footer className="bg-transparent rounded-lg shadow m-4">
           <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
             <div className="sm:flex sm:items-center sm:justify-between">
               <div className="flex items-center gap-2">
@@ -79,15 +88,13 @@ export default function RootLayout({
             <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
             <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
               © 2023{" "}
-              <a href="https://flowbite.com/" className="hover:underline">
-                Flowbite™
+              <a href="https://rodribp-portfolio.netlify.app" target="_blank" className="hover:underline">
+                FakeStore
               </a>
               . All Rights Reserved.
             </span>
           </div>
         </footer>
-
-        <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
       </body>
     </html>
   );
